@@ -1,0 +1,429 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #e9edf5;
+  background: #0b1020;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 50% 0%, #19264a 0%, transparent 48%),
+    #0b1020;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.topbar {
+  height: 72px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ffffff12;
+  background: #0b1020cc;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.brand-icon {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  color: #07101c;
+  background: #75e0c0;
+}
+
+.header-tag,
+.eyebrow,
+.step-number,
+.claim-number {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.header-tag {
+  color: #8b9ab5;
+}
+
+.container {
+  width: min(960px, 88%);
+  margin: 0 auto;
+}
+
+.hero {
+  padding: 76px 0 38px;
+  text-align: center;
+}
+
+.eyebrow {
+  color: #75e0c0;
+}
+
+.hero h1 {
+  margin: 15px 0 12px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(34px, 6vw, 54px);
+  letter-spacing: -2px;
+}
+
+.hero p {
+  max-width: 590px;
+  margin: 0 auto;
+  color: #9aa8bf;
+  line-height: 1.7;
+}
+
+.upload-card,
+.content-card,
+.claim-card,
+.stat-card {
+  border: 1px solid #29344d;
+  border-radius: 16px;
+  background: #121a2d;
+}
+
+.upload-card {
+  padding: 28px;
+}
+
+.upload-heading,
+.section-heading,
+.claim-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.upload-heading h2,
+.section-heading h2 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 23px;
+}
+
+.upload-heading p {
+  margin: 6px 0 0;
+  color: #91a0b8;
+  font-size: 14px;
+}
+
+.step-number {
+  color: #8b9ab5;
+  white-space: nowrap;
+}
+
+.dropzone {
+  min-height: 190px;
+  margin-top: 25px;
+  border: 1px dashed #52627f;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  background: #0c1425;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.dropzone:hover {
+  border-color: #75e0c0;
+  background: #101e30;
+}
+
+.dropzone input {
+  display: none;
+}
+
+.upload-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  color: #75e0c0;
+  background: #75e0c01a;
+  font-size: 25px;
+}
+
+.dropzone strong {
+  max-width: 90%;
+  overflow-wrap: anywhere;
+}
+
+.dropzone span {
+  color: #8b9ab5;
+  font-size: 13px;
+}
+
+.analyze-button {
+  width: 100%;
+  margin-top: 18px;
+  padding: 14px;
+  border: 0;
+  border-radius: 10px;
+  color: #07101c;
+  background: #75e0c0;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.analyze-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.loading-note {
+  color: #9aa8bf;
+  text-align: center;
+  font-size: 13px;
+}
+
+.error-message {
+  margin-top: 15px;
+  padding: 12px;
+  border: 1px solid #a64b5b;
+  border-radius: 9px;
+  color: #ffabb5;
+  background: #a64b5b18;
+}
+
+.results {
+  padding-top: 58px;
+}
+
+.section-heading {
+  margin-bottom: 20px;
+}
+
+.section-heading .eyebrow {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.file-label {
+  max-width: 45%;
+  overflow-wrap: anywhere;
+  color: #8b9ab5;
+  font-size: 12px;
+  text-align: right;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.stat-card {
+  min-height: 125px;
+  padding: 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stat-card span {
+  color: #9aa8bf;
+  font-size: 12px;
+}
+
+.stat-card strong {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 29px;
+}
+
+.stat-card small {
+  color: #8391a9;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.score-card strong {
+  color: #75e0c0;
+}
+
+.content-card {
+  margin-bottom: 38px;
+  padding: 23px;
+}
+
+.content-card h3,
+.claim-card h3 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.transcript {
+  margin-bottom: 0;
+  color: #b2bfd2;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+.claims-heading {
+  margin-top: 35px;
+}
+
+.claim-card {
+  margin-bottom: 13px;
+  padding: 22px;
+}
+
+.claim-number {
+  color: #8b9ab5;
+}
+
+.verdict {
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+.verdict.supported {
+  color: #75e0c0;
+  background: #75e0c01c;
+}
+
+.verdict.contradicted {
+  color: #ff929e;
+  background: #ff929e1c;
+}
+
+.verdict.insufficient {
+  color: #f3c779;
+  background: #f3c7791c;
+}
+
+.claim-card h3 {
+  margin-top: 18px;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.reason {
+  color: #a4b1c6;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+details {
+  margin-top: 18px;
+  border-top: 1px solid #29344d;
+  padding-top: 14px;
+}
+
+summary {
+  color: #75e0c0;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.evidence-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.evidence-item {
+  padding: 14px;
+  border-radius: 10px;
+  background: #0b1323;
+}
+
+.evidence-source {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #75e0c0;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.evidence-item strong {
+  display: block;
+  font-size: 13px;
+}
+
+.evidence-item p {
+  color: #9aa8bf;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.evidence-item a {
+  color: #75e0c0;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+footer {
+  padding: 45px 0 28px;
+  color: #66748d;
+  text-align: center;
+  font-size: 12px;
+}
+
+@media (max-width: 700px) {
+  .topbar {
+    padding: 0 6%;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .hero {
+    padding-top: 55px;
+  }
+
+  .upload-card {
+    padding: 18px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .upload-heading,
+  .section-heading {
+    align-items: flex-start;
+  }
+
+  .step-number {
+    font-size: 9px;
+  }
+}

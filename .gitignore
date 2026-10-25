@@ -1,0 +1,25 @@
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+.env
+.env.*
+!.env.example
+
+# Frontend
+node_modules/
+dist/
+
+# Local databases and model files
+chroma_db/
+chroma/
+*.pt
+*.pth
+*.onnx
+
+# Editors and operating system
+.vscode/
+.DS_Store
+Thumbs.db
